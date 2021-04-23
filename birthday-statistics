@@ -1,0 +1,15 @@
+/*
+Checks if any members are having their birthday today and either lists the members who are celebrating or shows a text that there are no birthdays in div "stats_birthday". The code uses jcink's variables <!-- |birthdays| --> and <!-- |birthdays_list| -->. "Birthdays" tells the number of birthdays today and "birthdays_list" lists all the members who are having their birthday today and their age in brackets.
+*/
+
+<div id='stats_birthday'>
+			
+</div>
+    
+<script>
+if ( <!-- |birthdays| --> > 0 ) {
+   document.getElementById("stats_birthday").innerHTML = "<p><!-- |birthdays_list| --> juhlii tänään syntymäpäiväänsä!</p>"
+} else {
+   document.getElementById("stats_birthday").innerHTML = "<p>Kukaan ei vietä tänään syntymäpäiväänsä.</p>"
+}
+</script>
