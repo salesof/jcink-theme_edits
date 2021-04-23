@@ -1,0 +1,63 @@
+/*
+Checks if the user is a guest and either adds a text "Vieras" meaning a guest or adds the jcink variable <!-- |g_title| --> which displays the group name (Admin, moderator or member). Uses the jcink variable <!-- |g_id| --> which shows the groups id number and compares that number to "2" which is the id number of guest member group.
+*/
+
+<div class="row_info_profile">
+  <i class="fa fa-drivers-license" style="font-size:22px; color:#fbfbfb; padding: 5px"></i>
+  <div>
+    <script>
+      if('<!-- |g_id| -->' == '2') {
+      document.write("<span class='stats_highlight_text'>Vieras</span>");
+      } else {
+      document.write("<span class='stats_highlight_text'><!-- |g_title| --></span>"); }
+    </script>
+  </div>
+</div>
+
+/*
+Checks if the custom variable <!-- |field_2| --> has anything assigned to it and either shows a text "Pelitilanne" or adds a text link using the custom variable. I set up this variable which is shown as an input field in profile settings and instructed the users to add a link to their roleplaying game situation page there.
+*/
+
+<div class="row_info_profile">
+  <i class="fa fa-link" style="font-size:22px; color:#fbfbfb; padding: 5px"></i>
+  <div id='pelitilanne'>
+    <script>
+      if('<!-- |field_2| -->' == '') {
+      document.write("<span class='stats_highlight_text'>Pelitilanne</span>");
+      } else {
+      document.write("<span class='stats_highlight_text'><a href='<!-- |field_2| -->'>Pelitilanne</a></span>"); }
+    </script>
+  </div>
+</div>
+
+/*
+Checks if the custom variable <!-- |field_1| --> has anything assigned to it and either shows a text "Seuranhaku" or adds a text link using the custom variable. I set up this variable which is shown as an input field in profile settings and instructed the users to add a link to their gameplay company look up page there.
+*/
+
+<div class="row_info_profile">
+  <i class="fa fa-link" style="font-size:22px; color:#fbfbfb; padding: 5px"></i>
+  <div id='seuranhaku'>
+    <script>
+      if('<!-- |field_1| -->' == '') {
+      document.write("<span class='stats_highlight_text'>Seuranhaku</span>");
+      } else {
+      document.write("<span class='stats_highlight_text'><a href='<!-- |field_1| -->'>Seuranhaku</a></span>"); }
+    </script>
+  </div>
+</div>
+
+/*
+Checks if the user is a guest and either adds a text "Yksityisviesti" meaning a personal message or adds the jcink variable <!-- |pm| --> which displays a link to a page where a member can send a personal message to the user. Uses the jcink variable <!-- |g_id| --> which shows the groups id number and compares that number to "2" which is the id number of guest member group.
+*/
+
+<div class="row_info_profile">
+  <i class="fa fa-envelope" style="font-size:22px; color:#fbfbfb; padding: 5px"></i>
+  <div class="profile_pm">
+    <script>
+      if('<!-- |g_id| -->' == '2') {
+      document.write("<span class='stats_highlight_text'>Yksityisviesti</span>");
+      } else {
+      document.write("<span class='stats_highlight_text'><!-- |pm| --></span>"); }
+    </script>
+  </div>
+</div>
